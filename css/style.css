@@ -1,0 +1,246 @@
+/*CSS reset*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+html {
+    font-size: 1rem;
+    scroll-behavior: smooth;
+    background-color:rgba(228, 228, 228, 0.486);
+}
+:root {
+    --green-color: #06b14f;
+    --blue-color: #0061a0;
+}
+
+/*navbar*/
+.logo {
+    text-decoration: none;
+    color: var(--green-color);
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+span {
+    color: var(--blue-color);
+    font-weight: 900;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 4px 0px 8px black;
+    opacity: .8;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-left: 3rem;
+    font-weight: 900;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #06b14f;
+    text-decoration: underline;
+}
+
+/* slider */
+#home {
+    display: flex;
+    flex-direction: column;
+    /* padding: 3px 200px; */
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    filter: brightness(.6);
+    animation: bgchange 8s infinite linear;
+}
+
+@keyframes bgchange {
+    0% {
+        background: url('../slide1.jpg')no-repeat center center/cover;
+    }
+
+    50% {
+        background: url('../slide2.jpg')no-repeat center center/cover;
+    }
+
+    100% {
+        background: url('../slide3.jpg')no-repeat center center/cover;
+    }
+}
+
+#home h1 {
+    font-size: 3.5rem;
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    text-shadow: 1px 1px var(--green-color);
+}
+
+#home p {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/* slider end */
+
+/* cards */
+.cards h1,
+a {
+    color: black;
+}
+
+.card {
+    margin: 8px;
+}
+
+.card img {
+    width: 250px;
+    height: 285px;
+    border: 1px solid lack;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px black;
+}
+
+.cardcont {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards img:hover {
+    box-shadow: 3px 3px 6px black, -3px -3px 6px black;
+    border: 3px solid black;
+}
+
+#service {
+    color: #0061a0;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 2px 3px black;
+}
+
+.cards p,
+h1 {
+    color: white;
+}
+
+/* Contact form */
+#map {
+    position: relative;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+.contact_form {
+    box-shadow: 1px 2px 8px 2px black;
+    background-color: #06b14f;
+    border: 2px solid black;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    padding: 8px;
+    margin-top: -300px;
+    margin-bottom: 50px;
+    z-index: 3;
+    width: 400px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form input {
+    width: 90%;
+    margin: 5px;
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    color: black;
+}
+
+.button {
+    display: block;
+    margin: auto;
+    background: #0061a0;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.button:hover {
+    box-shadow: 1px 2px 8px 2px black;
+}
+
+/* footer */
+.footer {
+    position: relative;
+    padding: 10px;
+    z-index: 2;
+    background-color: #0061a0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 5px solid #06b14f;
+    text-align: center;
+}
+
+#footerp {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#copy {
+    text-align: center;
+    background-color: #06b14f;
+    display: block;
+}
+
+#copy p {
+    padding: 1px;
+    color: white;
+    font-size: 0.8rem;
+    text-shadow: 1px 2px 3px black;
+}
+
+@media(max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}

@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 5px;
+    font-size: 1.1rem;
+}
+table{
+    width: 100vw;
+    background-color: rgb(146, 176, 204);
+}
+
+table, tbody, tr, th, td{
+    border: 3px solid white;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+table .green{
+    background-color: #06b14f;
+}
+
+table .blue{
+    background-color: rgb(1, 90, 146);
+}
